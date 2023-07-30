@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 } 
 
@@ -54,40 +55,89 @@ nav{
 header  a{
 
     cursor: pointer;
-    color: aliceblue;
+    color: whitesmoke;
 
 }
-
 main{
-/* 
+
+    background-color: rgb(19,34,53);
+    color: whitesmoke;
+} 
+
+main .main-conteiner{
+
     display: flex;
-    flex-direction: column; */
+    flex-direction: column;
     height: 100vh;
+    color: whitesmoke;
     width: 100vw;
-    margin-top: 65px; 
-    background-color: rgb(19,34,53);
-    color: whitesmoke;
 }
+ 
+main .son-conteiner{
 
-.vida{
-
-    
     display: flex;
-    flex-direction: column; 
-    height: 100%;
-    margin-top: 65px; 
-    background-color: rgb(19,34,53);
+    flex-direction: column;
+    margin-top: 6rem;
+    height: 50%;
     color: whitesmoke;
-    
+    width: 90%;
+} 
+
+
+main .main-conteiner  .reserve{
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
-.vida label{
+main .main-conteiner .table{
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    gap:0.5rem;
+}
+
+main .son-conteiner2{
 
     display: flex;
     flex-direction: column;
 }
 
-.vida input{
+main .main-conteiner button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    height: 5vh;
+    width: 10%;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+main .main-conteiner button:hover{
+
+    background-color: rgba(255, 255, 255, 0.589);
+    transition: 4s;
+}
+
+.baseboard{
 
     display: flex;
     flex-direction: column;
+    height:45vh;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: rgb(19,34,53);
+    box-shadow: 0 0.02rem 0.3rem rgb(245, 243, 243);
 }
+
+

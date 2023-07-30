@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="reserva.css">
-    <title>Reservas</title>
+    <title>Project Landing Page</title>
 </head>
 
 <header>
@@ -25,7 +25,7 @@
         <li><a href="index.html">Início</a></li>
         <li><a href="script2.html">Encontre uma moradias</a></li>
         <li><a href="reserva.html">Reservas</a></li> 
-        <li><a href="#">Conta</a></li>
+        <li><a href="conta.html">Conta</a></li>
 </ul>
 
     <div id="icon"> 
@@ -39,15 +39,80 @@
 </header>
 
 <main> 
-    <div class="vida">  
-        <p>data</p>
-    <form action="#">
+    <div class="main-conteiner">  
 
-    <label for="de">Data</label>
-    <input type="text">
+                
+      <div class="son-conteiner">
+ 
+        <h2 class="reserve"> Faça sua reserva</h2>
+
+    <form class="table" action="#">
+
+    <label for="check-in">Check-in</label>
+    <input id="check-in" type="date">
+
+    <label for="check-out">Check-out</label>
+    <input id="check-out" type="date">
+
+    
+    <label for="location">Destino</label>
+    <input id="location" type="text" placeholder="Ex: Campina Grande"> 
+
+    <label for="rom"> Quartos </label>
+    <input id="rom" type="number">
+
+        <button>Buscar</button>
+    </form>
+
+
+</div>
+
+<div class="son-conteiner2">  
+
+    <h2 class="reserve"> Procuramos as melhores moradias para você!! </h2>
+
+    <form class="table" action="#">
+
+       
+
+        <label for="what-search">Qual o tipo de moradia que você procurar?</label>
+        <input id="what-search" type="text" placeholder="Ex: Casa,apto,hotel">
+
+        <label for="destiny">Qual cidade você quer ?</label>
+        <input id="destiny" type="text" placeholder="Ex: Campina Grande">
+
+        <label for="roms"> Quantidade de quartos</label>
+        <input id="roms" type="number">
+
+        <label for="#">Você precisa de acessibilidade ?</label>
+        
+        <label for="yes">Sim </label>
+        <input id="yes" type="checkbox">
+
+        <label for="no">Nâo </label>
+        <input id="no" type="checkbox" caller>
 
     </form>
+
+    <button>Buscar</button>
+
 </div>
+</div>
+
+</main>
+
+<footer class="baseboard">
+        
+    <p>Encontre um apartamento estudantil</p>
+    <h2>Ver todos as Moradias | O que está incluído?</h2>
+    <p>Navegação</p>
+    <h2>Início | Nossos Serviços | Reservas</h2>
+
+    -----------------------------------------------------------
+    <p>Política de Privacidade | Termos de Serviço</p>
+
+</footer>
+
 <body>
     
 </body>
