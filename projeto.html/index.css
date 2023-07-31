@@ -19,7 +19,7 @@ header{
 }
 header #image{
 
-    height: 95.5%;
+    height: 95%;
     width: 10vw; 
 }
 
@@ -32,6 +32,10 @@ nav{
     align-items: center;
     justify-content: space-evenly;
 }
+/* #checkbox-menu{
+
+    display: none;
+} */
 
 #menu{
 
@@ -154,15 +158,15 @@ main .two-color {
     justify-content: center;
     align-items: center;
     width: 40vw;
-    gap: 30px;
+    gap: 20px;
 
 }
 
-.box-image {
+.box-image  a img {
 
     
-    height: 50%;
-    width: 36%;
+    height: 80%;
+    width: 80%;
     background-color: rgb(255, 255, 255);
 }
 /* Segunda caixa*/
@@ -305,8 +309,8 @@ main .box-end{
 
 #image{
 
-    height: 80%;
-    width: 24%;
+    height: 15%;
+    width: 50%;
 }
 
 nav{
@@ -315,35 +319,52 @@ nav{
 
 }
 
-#nav #burguer{
+#burguer{
 
-display: flex;
-width: 30px;
-height: 30px;
-}
-
-#nav ul{
-    visibility: hidden;
-    opacity: 0;
-    padding-top: 30px;
-    position: absolute;
-    flex-direction: column;
-    top: 12vh;
-    right: 0;
-    width: 0%;
-    height: calc(100vh - 12vh);
-    background-color: var(--gray2);
+    height: 100%;
+    display: flex;
     align-items: center;
-    gap: 50px;
-    overflow: hidden;
-    transition-duration: 0.3s;
+    justify-content: center;
 }
 
-.active{
-    visibility: visible;
-    opacity: 1;
-    width: 50%;
+#checkbox-menu{
+
+    
+    position: absolute;
+    opacity: 0;
 }
+
+label{
+
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+label span{
+
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgb(255, 0, 0);
+}
+
+label span:nth-child(1){
+
+    top: 0;
+}
+label span:nth-child(2){
+
+    top: 8px;
+}
+label span:nth-child(3){
+    top: 16px;
+}
+
 
 
 #icon{
@@ -363,13 +384,6 @@ header  a{
     cursor: pointer;
     color: aliceblue;
 
-}
-.style-button{
-
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(255,255,255);
 }
 
 main{
@@ -404,14 +418,14 @@ main .box-main{
 
     display: flex;
     flex-direction: column;
-    height: 50vh;
+    height: 60vh;
     width: 50%;
     padding: 0.9% 1%;
     gap: 1rem;
 }
 main .box-main h2{
 
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 /* LADO DIREITO, PRIMEIRA CAIXA*/
 
@@ -430,14 +444,14 @@ main .box-main h2{
 
     display: flex;
     text-align: center;
-    font-size: 1.2rem;
-    line-height: 30px;
+    font-size: 0.9rem;
+    /* line-height: 30px; */
 
 }
 
 .box-image img {
 
-    display: block;
+    
     height: 50%;
     width: 80%;
     background-color: rgb(255, 255, 255);
@@ -449,7 +463,7 @@ main .box-main p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     height: 15%;
 }
 
@@ -618,7 +632,7 @@ main .box-end{
     width: 25%;
 }
 
-#nav{
+nav{
 
     display: none;
     height: 100%;
@@ -635,7 +649,7 @@ main .box-end{
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
+    color: whitesmoke;
     font-size: 1.2rem;
 
 
@@ -644,15 +658,8 @@ main .box-end{
 header  a{
 
     cursor: pointer;
-    color: aliceblue;
+    color: whitesmoke;
 
-}
-.style-button{
-
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(255,255,255)
 }
 
 /* PRIMEIRA CAIXA*/
@@ -684,6 +691,10 @@ main .two-color{
     text-fill-color: transparent;
 }
 
+main .box-main p{
+
+    font-size: 1remS;
+}
 
 /*PRIMEIRA CAIXA DO DIREITO*/
 
@@ -695,6 +706,7 @@ main .box-main{
     width: 50%;
     padding: 0.9% 1%;
     gap: 1rem;
+    margin-top: 10px;
     font-size: 0.2rem;
 }
 
@@ -702,6 +714,11 @@ main .box-main h2{
 
     font-size: 1rem;
     
+}
+
+main .box-main p{
+
+    font-size: 1rem;
 }
 
 main .box-main span{
@@ -732,11 +749,10 @@ main .box-image h2{
     font-size: 1rem;
 }
 
-main .box-image img {
+main .box-image a img{
 
-    display: block;
-    height: 50%;
-    width: 60%;
+    height: 70%;
+    width: 90%;
     background-color: rgb(255, 255, 255);
 }
 
@@ -814,7 +830,7 @@ main .box-son2 button:hover{
     width: 11%;
 }
 
-#nav{
+nav{
 
     display: flex;
     height: 100%;
@@ -925,14 +941,66 @@ main .box-image{
 main .box-image h2{
 
     font-size: 1rem;
+    margin-top: 1rem;
 
 }
 
-main .box-image img {
+main .box-image a img{
 
-    height: 50%;
-    width: 60%;
+    height: 60%;
+    width: 80%;
     background-color: rgb(255, 255, 255);
+}
+
+
+/* Segundo coteiner */
+
+main .box-son h2{
+
+    font-size: 1rem;
+    text-align: center; 
+}
+
+main .box-son button{
+
+    width: 80%;
+    font-size: 0.8rem;
+    
+}
+
+main .box-son p{
+
+    font-size: 0.8rem;
+}
+
+main .box-son2{
+
+    
+}
+
+main .box-son2 h2{
+
+    font-size: 1rem;
+}
+main .box-son2 p{
+
+    font-size: 0.8rem;
+}
+
+main .box-son2 button{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.7rem;
+}
+
+main .box-son2 button:hover{
+
+    transition: 0.6s;
+    background-color: rgba(255, 255, 255, 0.712);
+    border: none;
 }
 }
 
@@ -958,7 +1026,7 @@ main .box-image img {
     width: 11%;
 }
 
-#nav{
+nav{
 
     display: flex;
     height: 100%;
@@ -988,13 +1056,7 @@ header  a{
     color: aliceblue;
 
 }
-.style-button{
 
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(255,255,255)
-}
 
 main{
 
