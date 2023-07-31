@@ -58,3 +58,61 @@ header  a{
     color: whitesmoke;
 
 }
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(19,34,53);
+    color: whitesmoke;
+}
+
+main .main-conteiner{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19,34,53);
+    color: whitesmoke;
+    height: 100%;
+}
+
+main .main-conteiner .login{
+
+    display: flex;
+    height: 50%;
+    width: 50%;
+    background-color: rgb(6, 6, 6);
+}
+
+
+main .main-conteiner .login form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+}
+
+main .main-conteiner .login form button{
+
+    width: 20%;
+    height: 5vh;
+    color: black;
+    border-radius: 16px;
+    font-size: 0.6rem;
+    background-color:  rgb(255,255,255);;
+
+}
+
+
+main .main-conteiner .login form button:hover{
+
+    transition: 0.6s;
+    background-color: rgba(255, 255, 255, 0.712);
+    border: none;
+}
