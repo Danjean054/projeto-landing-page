@@ -32,6 +32,11 @@ nav{
     justify-content: space-evenly;
 }
 
+.menu-faketrigger{
+
+    display: none;
+}
+
 #menu{
 
     display: flex;
@@ -115,4 +120,228 @@ main .main-conteiner .login form button:hover{
     transition: 0.6s;
     background-color: rgba(255, 255, 255, 0.712);
     border: none;
+}
+/*Responsividade*/
+
+@media screen and ( max-device-width: 480px){
+
+header #image{
+
+    height: 90%;
+    width: 20vw; 
+}
+
+
+nav #menu{
+
+    display: none;
+    height: 50%;
+    margin-top: 15px;
+    margin-left: 20px;
+    gap: 7px;
+}
+
+nav .menu-lines{
+    
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+nav .menu-lines span{
+
+    display: flex;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 3px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    transition: 0.6s;
+}
+
+nav .menu-faketrigger{
+
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 30px;
+    height: 3px;
+    opacity: 0;
+}
+
+nav .menu-faketrigger:checked~#menu {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height:50% ; 
+    padding-top:25px ;
+    font-size: 0.6rem;
+    
+}
+
+nav .menu ul li {
+
+    padding: 10px 30px;
+}
+
+nav .menu  li a{
+
+    text-decoration: none;
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+
+    transform-origin: 0% 0%;
+    transform: rotate(25deg) scaleX(1);
+
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+
+    opacity: 0;
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+
+    
+    transform-origin: 0% 100%;
+    transform: rotate(-25deg) scaleX(1);
+
+}
+
+#icon{
+
+    display: none;
+}
+
+main .main-conteiner .login form button{
+
+    width: 50%;
+    height: 5vh;
+}
+}
+@media (min-width: 481px) and (max-width: 725px){
+
+    header #image{
+
+        height: 80%;
+        width: 20vw; 
+    }
+    
+    #menu{
+    
+        display: none;
+    }
+
+    
+
+nav #menu{
+
+    display: none;
+    height: 50%;
+    margin-top: 15px;
+    margin-left: 20px;
+    gap: 7px;
+}
+
+nav .menu-lines{
+    
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+nav .menu-lines span{
+
+    display: flex;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 3px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    transition: 0.6s;
+}
+
+nav .menu-faketrigger{
+
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 30px;
+    height: 3px;
+    opacity: 0;
+}
+
+nav .menu-faketrigger:checked~#menu {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height:50% ; 
+    padding-top:25px ;
+    font-size: 0.6rem;
+    
+}
+
+nav .menu ul li {
+
+    padding: 10px 30px;
+}
+
+nav .menu  li a{
+
+    text-decoration: none;
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+
+    transform-origin: 0% 0%;
+    transform: rotate(25deg) scaleX(1);
+
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+
+    opacity: 0;
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+
+    
+    transform-origin: 0% 100%;
+    transform: rotate(-25deg) scaleX(1);
+
+}
+    
+    #icon{
+    
+        display: none;
+    }
+    
+    main .main-conteiner .login form button{
+    
+        width: 50%;
+        height: 5vh;
+    }
+
+}
+@media (min-width: 725px) and (max-width: 1000px){
+
+.menu-faketrigger{
+
+    display: none;
+}
 }
