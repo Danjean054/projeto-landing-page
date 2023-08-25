@@ -20,54 +20,31 @@ header{
 header #image{
 
     height: 95.5%;
-    width: 10vw; 
+    width: 10vw;
 }
 
 nav{
 
     display: flex;
-    /* position: relative; */
     height: 100%;
     width: 100%;
     align-items: center;
-    
+    justify-content: space-evenly;
+
+}
+
+.menu-faketrigger{
+
+    display: none;
 }
 
 #menu{
 
     display: flex;
     width: 90%;
-    justify-content: space-evenly;    
-    
-}
-/* nav ul ul{
-
-    display: none;
-    height: 100vh;
-}
-nav ul li:hover ul{
-
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 200px;
-    position: absolute;
-    left: 35%;
-    background-color:rgba(255, 255, 255, 0.219);
-    text-align: center;
-    padding: 20px 0;
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    transform: translateX(-35%);
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
-
-nav ul li:hover ul a{
-
-    color:rgb(0, 0, 0);
-
-} */
 
 #icon{
 
@@ -77,20 +54,20 @@ nav ul li:hover ul a{
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
+    color:whitesmoke;
     font-size: 1.2rem;
 }
 
 header  a{
 
     cursor: pointer;
-    color: aliceblue;
+    color: whitesmoke;
 
 }
 
 div{
 
-    box-shadow: 0 0.02rem 0.3rem rgb(245, 243, 243); 
+    box-shadow: 0 0.02rem 0.3rem rgb(245, 243, 243);
 }
 main{
 
@@ -130,7 +107,7 @@ main #main-conteiner{
     justify-content: center;
     margin: 1rem;
     height: 5vh;
-    width: 10%;
+    width: 12%;
     cursor: pointer;
     border-radius: 12px;
 
@@ -151,7 +128,7 @@ main #main-conteiner{
 #main-conteiner .son-conteiner .son{
 
     display: flex;
-    
+
 }
 
 
@@ -166,8 +143,404 @@ main #main-conteiner{
     align-items: center;
     gap: 15px;
     background-color: rgb(19,34,53);
-    box-shadow: 0 0.02rem 0.3rem rgb(245, 243, 243); 
+    box-shadow: 0 0.02rem 0.3rem rgb(245, 243, 243);
 }
 
 
 /*RESPONSIVIDADE*/
+
+@media screen and ( max-device-width: 480px){
+
+header{
+
+    height: 12vh;
+}
+header #image{
+
+        height: 90%;
+        width: 25vw;
+}
+
+nav #menu{
+
+    display: none;
+    margin-top: 30px;
+    margin-left: 40px;
+    gap: 7px;
+}
+
+nav .menu-lines{
+
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .menu-lines span{
+
+    display: flex;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 3px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    transition: 0.6s;
+}
+
+nav .menu-faketrigger{
+
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    width: 30px;
+    height: 3px;
+    opacity: 0;
+}
+
+nav .menu-faketrigger:checked~#menu {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height:50% ;
+    padding-top:25px ;
+    font-size: 0.6rem;
+
+}
+
+nav .menu ul li {
+
+    padding: 10px 30px;
+}
+
+nav .menu  li a{
+
+    text-decoration: none;
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+
+    transform-origin: 0% 0%;
+    transform: rotate(25deg) scaleX(1);
+
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+
+    opacity: 0;
+}
+
+nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+
+
+    transform-origin: 0% 100%;
+    transform: rotate(-25deg) scaleX(1);
+
+}
+
+#icon{
+
+    display: none;
+}
+
+#main-conteiner .son-conteiner img{
+
+    height: 20vh;
+}
+
+#main-conteiner .son-conteiner table th{
+
+    padding: 0;
+    padding-top: 4%;
+}
+
+#main-conteiner .son-conteiner table {
+
+    font-size: 0.7rem;
+}
+
+#main-conteiner .son-conteiner button{
+
+
+    height: 5vh;
+    width: 40%;
+    font-size: 0.7rem;
+
+}
+
+.baseboard{
+
+    height:45vh;
+    font-size: 0.9rem;
+    gap: 15px;
+}
+
+.baseboard h2{
+
+    font-size: 0.9rem;
+}
+}
+
+@media (min-width: 481px) and (max-width: 725px){
+
+    header #image{
+
+        height: 97%;
+        width: 20vw;
+    }
+
+    nav #menu{
+
+        display: none;
+        margin-top: 30px;
+        margin-left: 40px;
+        gap: 7px;
+    }
+    
+    nav .menu-lines{
+    
+        position: absolute;
+        z-index: 999;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav .menu-lines span{
+    
+        display: flex;
+        width: 30px;
+        height: 3px;
+        margin-bottom: 3px;
+        background-color: whitesmoke;
+        border-radius: 3px;
+        transition: 0.6s;
+    }
+    
+    nav .menu-faketrigger{
+    
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        width: 30px;
+        height: 3px;
+        opacity: 0;
+    }
+    
+    nav .menu-faketrigger:checked~#menu {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 998;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height:50% ;
+        padding-top:25px ;
+        font-size: 0.6rem;
+    
+    }
+    
+    nav .menu ul li {
+    
+        padding: 10px 30px;
+    }
+    
+    nav .menu  li a{
+    
+        text-decoration: none;
+    }
+    
+    nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+    
+        transform-origin: 0% 0%;
+        transform: rotate(25deg) scaleX(1);
+    
+    }
+    
+    nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+    
+        opacity: 0;
+    }
+    
+    nav .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+    
+    
+        transform-origin: 0% 100%;
+        transform: rotate(-25deg) scaleX(1);
+    
+    }
+    
+#icon{
+
+    display: none;
+}
+
+#main-conteiner .son-conteiner img{
+
+    height: 20vh;
+}
+
+#main-conteiner .son-conteiner table th{
+
+
+    padding-top: 4%;
+}
+
+#main-conteiner .son-conteiner table {
+
+    font-size: 0.7rem;
+}
+
+#main-conteiner .son-conteiner button{
+
+
+    height: 5vh;
+    width: 40%;
+    font-size: 0.7rem;
+
+}
+
+.baseboard{
+
+    height:45vh;
+    font-size: 0.9rem;
+    gap: 15px;
+}
+
+.baseboard h2{
+
+    font-size: 0.9rem;
+}
+
+}
+@media (min-width: 725px) and (max-width: 1000px){
+
+
+    header #image{
+
+        height: 85%;
+        width: 20vw;
+    }
+
+nav{
+
+    font-size: 0.7rem;
+
+}
+#icon{
+
+    font-size: 0.9rem;
+    gap: 1rem;
+
+}
+
+#main-conteiner .son-conteiner img{
+
+    height: 20vh;
+}
+
+#main-conteiner .son-conteiner table th{
+
+
+    padding-top: 4%;
+}
+
+#main-conteiner .son-conteiner table {
+
+    font-size: 0.9rem;
+}
+
+#main-conteiner .son-conteiner button{
+
+
+    height: 5vh;
+    width: 20%;
+    font-size: 0.7rem;
+
+}
+
+.baseboard{
+
+    height:45vh;
+    font-size: 0.9rem;
+    gap: 15px;
+}
+
+.baseboard h2{
+
+    font-size: 1rem;
+}
+}
+@media (min-width: 1000px) and (max-width: 1300px){
+
+    header #image{
+
+        height: 80%;
+        width: 10vw;
+    }
+
+nav{
+
+    font-size: 1rem;
+
+}
+#icon{
+
+    font-size: 1rem;
+    gap: 1rem;
+
+}
+
+#main-conteiner .son-conteiner img{
+
+    height: 20vh;
+}
+
+#main-conteiner .son-conteiner table th{
+
+
+    padding-top: 4%;
+}
+
+#main-conteiner .son-conteiner table {
+
+    font-size: 0.9rem;
+}
+
+#main-conteiner .son-conteiner button{
+
+
+    height: 5vh;
+    width: 20%;
+    font-size: 0.7rem;
+
+}
+
+.baseboard{
+
+    height:45vh;
+    font-size: 0.9rem;
+    gap: 15px;
+}
+
+.baseboard h2{
+
+    font-size: 1rem;
+}
+}
